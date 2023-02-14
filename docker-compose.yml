@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  remix-serve:
+    image: guitarla-remix.run:1.0.0
+    build: .
+    container_name: GuitarLA-Remix.run
+    restart: always
+    environment:
+      - API_URL=${API_URL}
+      - NODE_ENV=${NODE_ENV}
+    ports:
+      - "8080:3000"
